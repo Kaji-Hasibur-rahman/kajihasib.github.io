@@ -1,0 +1,92 @@
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a, a:hover, a:active, a:focus{
+	text-decoration:none;
+	outline:none;
+}
+.mainmenu{
+	width:1170px;
+	margin:auto;
+}
+.header-area{
+	background:#2B6F3A;
+}
+.mainmenu nav ul li{
+	display:inline-block;
+	position:relative;
+}
+.mainmenu nav ul li a{
+	padding:20px 15px;
+	display:block;
+	color:#fff;
+	text-transform:uppercase;
+	font-weight:bold;
+	transition:all .5s;
+}
+.mainmenu nav ul li a:hover, .mainmenu nav ul li.active{
+	background:#C49A44;
+}
+.mainmenu nav ul li > ul{
+	width:150px;
+	background:#C49A44;
+	display:block;
+	visibility:hidden;
+	opacity:0;
+	transform:scaleY(0);
+	transition:all .5s;
+	position:absolute;
+	transform-origin:0 0 0;
+}
+.mainmenu nav ul li:hover > ul{
+	visibility:visible;
+	opacity:1;
+	transform:scaleY(1);
+}
+.mainmenu nav ul li > ul li{
+	display:block;
+	position:relative;
+}
+.mainmenu nav ul li > ul li:before{
+	content:"";
+	position:absolute;
+	width:90%;
+	background:#fff;
+	height:1px;
+	bottom:0;
+	left:8px;
+}
+.mainmenu nav ul li > ul li:last-child:before{
+	display:none;
+}
+.mainmenu nav ul li > ul li i{
+	float:right;
+}
+.mainmenu nav ul li > ul li a{
+	padding:8px;
+	font-weight:500;
+	transition:all .5s;	
+}
+.mainmenu nav ul li > ul li  a:hover{
+	background:#2B6F3A;
+}
+.mainmenu nav ul li > ul li  > ul{
+	left:110%;
+	transition:all .5s;
+	top:0;
+}
+.mainmenu nav ul li > ul li:hover  > ul{
+	left:100%;
+}
